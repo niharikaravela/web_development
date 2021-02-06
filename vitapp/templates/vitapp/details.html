@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  	<script type="{% static 'jquery/jquery.min.js' %}"></script>
+  	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<div class="container col-md-6">
+		<table class="table table-bordered">
+				<thead>
+				<tr>
+					<th>Fname</th>
+					<th>Lname</th>
+					<th>Uname</th>
+					<th>RollNo</th>
+					<th>Password</th>
+					<th>Email</th>
+					<th>Mobile</th>
+				</tr>
+				</thead>
+				<tbody class="text-center">
+					<tr>
+						<td>{{Fname}}</td>
+						<td>{{Lname}}</td>
+						<td>{{Uname}}</td>
+						<td>{{RollNo}}</td>
+						<td>{{Password}}</td>
+						<td>{{Email}}</td>
+						<td>{{Mobile}}</td>
+
+					</tr>
+				</tbody>				
+		</table>
+	</div>
+</body>
+</html>

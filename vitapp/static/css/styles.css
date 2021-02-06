@@ -1,0 +1,16 @@
+h1{
+	font-size:300%;
+	background-color: yellow;
+	color: red;
+	font-family: consolas;
+	text-align: center;
+}
+body{
+	background-color: tomato;
+	color: grey;
+}
+
+.tab{
+	color: grey;
+	border-style: solid;
+}

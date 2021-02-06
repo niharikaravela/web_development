@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details Page</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  	<script type="{% static 'jquery/jquery.min.js' %}"></script>
+  	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  	<!-- Brand/logo -->
+  	<a class="navbar-brand" href="#">Crud Operations </a>
+  
+  	<!-- Links -->
+  	<ul class="navbar-nav">
+  		<li class="nav-item">
+      		<a class="nav-link" href="{% url 'home' %}">Home</a>
+    	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'register' %}">Register</a>
+    	</li>
+    	<li class="nav-item">
+          <a class="nav-link" href="{% url 'signin' %}">Login</a>
+      	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'details' %}">Details</a>
+    	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+    	</li>
+  	</ul>
+	</nav>
+
+	<div class="container mt-5 col-md-10">
+		<h2 class="alert alert-info text-center">Details</h2>
+		<table class="table table-bordered table-hover table-dark">
+			<thead>
+				<tr>
+					<th>S.no</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>User Name</th>
+					<th>Roll No</th>
+					<th>E-mail id</th>
+					<th>Mobile Number</th>
+					<th>Gender</th>
+					<th>Age</th>
+					<th colspan="2">Operations</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in info %}
+				<tr>
+					<td>{{i.id}}</td>
+					<td>{{i.fname}}</td>
+					<td>{{i.lname}}</td>
+					<td>{{i.uname}}</td>
+					<td>{{i.rno}}</td>
+					<td>{{i.email}}</td>
+					<td>{{i.mobile}}</td>
+					<td>{{i.gender}}</td>
+					<td>{{i.age}}</td>
+					<td><a class="btn btn-outline-success" href="{% url 'update' i.id %}">Update</a></td>
+					<td><a class="btn btn-outline-danger" href="{% url 'delete' i.id %}">Delete</a></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		
+	</div>
+</body>
+</html>

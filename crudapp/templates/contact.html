@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  	<script type="{% static 'jquery/jquery.min.js' %}"></script>
+  	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  	<!-- Brand/logo -->
+  	<a class="navbar-brand" href="#">Crud Operations </a>
+  
+  	<!-- Links -->
+  	<ul class="navbar-nav">
+      <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
+      </li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'register' %}">Register</a>
+    	</li>
+      <li class="nav-item">
+          <a class="nav-link" href="{% url 'signin' %}">Login</a>
+      </li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'details' %}">Details</a>
+    	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'contact' %}">Contact US</a>
+    	</li>
+  	</ul>
+	</nav>
+	<div class="container col-md-6 mt-5" >
+	<p>If you have any queries mail us at : <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSMSqbMcTgzkKVtVsxLLZgMmFZkXknVVGLmLhrlpxCZdQrhhTpBXPwwfJznLdSCfqTRwpHhQ">vitw.genenquiry@gmail.com</a></p>
+	<p>OR contact us at Ph no: **********</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  	<script type="{% static 'jquery/jquery.min.js' %}"></script>
+  	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body background="{% static 'images/back3.png' %}" style="background-size: cover; background-repeat: no-repeat;" >
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  	<!-- Brand/logo -->
+  	<a class="navbar-brand" href="#">Crud Operations </a>
+  
+  	<!-- Links -->
+  	<ul class="navbar-nav">
+  		<li class="nav-item">
+      		<a class="nav-link" href="{% url 'home' %}">Home</a>
+    	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'register' %}">Register</a>
+    	</li>
+    	<li class="nav-item">
+          <a class="nav-link" href="{% url 'signin' %}">Login</a>
+      	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'details' %}">Details</a>
+    	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'contact' %}">Contact US</a>
+    	</li>
+  	</ul>
+	</nav>
+	<h2 class="text-center mt-5"> Welocme To the Website <p><h3>If you are new user please <a href="{% url 'register' %}">register </a> </h3></p><p><h3>If you are an exsisting user <a href="{% url 'signin' %}">login</a> </h3></p></h2>
+
+
+</body>
+</html>

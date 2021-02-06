@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Student</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  	<script type="{% static 'jquery/jquery.min.js' %}"></script>
+  	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  	<!-- Brand/logo -->
+  	<a class="navbar-brand" href="#">Crud Operations </a>
+  
+  	<!-- Links -->
+  	<ul class="navbar-nav">
+  		<li class="nav-item">
+      		<a class="nav-link" href="{% url 'home' %}">Home</a>
+    	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'register' %}">Register</a>
+    	</li>
+    	<li class="nav-item">
+          <a class="nav-link" href="{% url 'signin' %}">Login</a>
+      	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'details' %}">Details</a>
+    	</li>
+    	<li class="nav-item">
+      		<a class="nav-link" href="{% url 'contact' %}">Contact US</a>
+    	</li>
+  	</ul>
+	</nav>
+
+	<div class="container card col-md-6 mt-3  bg-secondary">
+		<h2>Register</h2>
+		<form method="POST">
+			{% csrf_token %}
+			<input type="text" name="fname" placeholder="Enter your first name" class="form-control mt-2">
+			<input type="text" name="lname" placeholder="Enter your last name" class="form-control mt-2" >
+			<input type="text" name="uname" placeholder="Enter your user name" class="form-control mt-2" >
+			<input type="text" name="rno" placeholder="Enter your roll number" class="form-control mt-2" >
+			<input type="email" name="email" placeholder="Enter your email-id " class="form-control mt-2">
+			<input type="number" name="mobile" placeholder="Enter your mobile number" class="form-control mt-2">
+			<div>
+				<label for="gender">Gender :</label>
+				<label class="radio-inline">
+					<input type="radio" name="gender" value="Female">Female
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="gender" value="Male">Male
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="gender" value="Others">Others
+				</label>
+			</div>
+			<input type="number" name="age" placeholder="Enter your Age" class="form-control mt-2">
+			<div class="card-footer">
+					<button class="btn btn-dark">Register</button>
+				</div>
+		</form>
+	</div>
+
+
+
+
+
+</body>
+</html>
